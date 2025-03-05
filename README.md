@@ -61,12 +61,13 @@ work-tracker/
 
 2. **Install Dependencies**: 
    ```
-   npm install
+   mvn clean install
+   {RUN pom.xml manually}
    ```
 
 3. **Run the Application**: 
    ```
-   npm start
+   mvn spring-boot:run
    ```
 
 ## Usage
