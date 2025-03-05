@@ -1,0 +1,62 @@
+package com.worktracker.service;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+class EmailServiceTest {
+    private EmailService emailService;
+
+    @BeforeEach
+    void setUp() {
+        emailService = new EmailService();
+    }
+
+    @Test
+    void testSendEmail() {
+        String recipient = "test@example.com";
+        String subject = "Test Subject";
+        String body = "This is a test email.";
+        
+        boolean result = emailService.sendEmail(recipient, subject, body);
+        assertTrue(result, "Email should be sent successfully.");
+    }
+}
+
+class GraphGeneratorServiceTest {
+    private GraphGeneratorService graphGeneratorService;
+
+    @BeforeEach
+    void setUp() {
+        graphGeneratorService = new GraphGeneratorService();
+    }
+
+    @Test
+    void testGenerateGraph() {
+        // Assuming we have some data to generate a graph
+        int[] workData = {1, 2, 3, 4, 5};
+        String graph = graphGeneratorService.generateGraph(workData);
+        
+        assertNotNull(graph, "Graph should be generated.");
+    }
+}
+
+class StatisticsServiceTest {
+    private StatisticsService statisticsService;
+
+    @BeforeEach
+    void setUp() {
+        statisticsService = new StatisticsService();
+    }
+
+    @Test
+    void testCalculateStatistics() {
+        // Assuming we have some work sessions to calculate statistics
+        int completedTasks = 5;
+        int totalTasks = 10;
+        
+        double completionRate = statisticsService.calculateCompletionRate(completedTasks, totalTasks);
+        
+        assertEquals(0.5, completionRate, "Completion rate should be 0.5.");
+    }
+}

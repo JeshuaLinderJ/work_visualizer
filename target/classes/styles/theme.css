@@ -1,0 +1,45 @@
+body {
+    background-color: #f5f5f0; /* Light beige background */
+    color: #4e3b31; /* Dark brown text */
+    font-family: 'Arial', sans-serif;
+}
+
+h1, h2, h3 {
+    color: #7a5b5a; /* Soft pink for headings */
+}
+
+.task-box {
+    background-color: #e8d8d0; /* Light brown for task boxes */
+    border: 1px solid #c2b2a0; /* Slightly darker border */
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.button {
+    background-color: #c2b2a0; /* Muted earth tone for buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #7a5b5a; /* Darker pink on hover */
+}
+
+.progress-chart {
+    background-color: #f5f5f0; /* Background for progress chart */
+    border: 1px solid #c2b2a0; /* Border for the chart */
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.celebration-animation {
+    color: #7a5b5a; /* Soft pink for celebration text */
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+}

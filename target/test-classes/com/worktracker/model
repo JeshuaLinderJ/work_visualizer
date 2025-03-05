@@ -1,0 +1,92 @@
+package com.worktracker.model;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+class TaskTest {
+    private Task task;
+
+    @BeforeEach
+    void setUp() {
+        task = new Task("Test Task", "This is a test task.", false);
+    }
+
+    @Test
+    void testGetTitle() {
+        assertEquals("Test Task", task.getTitle());
+    }
+
+    @Test
+    void testGetDescription() {
+        assertEquals("This is a test task.", task.getDescription());
+    }
+
+    @Test
+    void testIsCompleted() {
+        assertFalse(task.isCompleted());
+        task.setCompleted(true);
+        assertTrue(task.isCompleted());
+    }
+}
+
+class TimeBlockTest {
+    private TimeBlock timeBlock;
+
+    @BeforeEach
+    void setUp() {
+        timeBlock = new TimeBlock("2023-10-01T09:00:00", "2023-10-01T10:00:00");
+    }
+
+    @Test
+    void testGetStartTime() {
+        assertEquals("2023-10-01T09:00:00", timeBlock.getStartTime());
+    }
+
+    @Test
+    void testGetEndTime() {
+        assertEquals("2023-10-01T10:00:00", timeBlock.getEndTime());
+    }
+}
+
+class WorkSessionTest {
+    private WorkSession workSession;
+
+    @BeforeEach
+    void setUp() {
+        workSession = new WorkSession();
+    }
+
+    @Test
+    void testAddTask() {
+        Task task = new Task("Task 1", "Description 1", false);
+        workSession.addTask(task);
+        assertEquals(1, workSession.getTasks().size());
+    }
+
+    @Test
+    void testGetTotalTasks() {
+        assertEquals(0, workSession.getTotalTasks());
+        workSession.addTask(new Task("Task 1", "Description 1", false));
+        assertEquals(1, workSession.getTotalTasks());
+    }
+}
+
+class UserSettingsTest {
+    private UserSettings userSettings;
+
+    @BeforeEach
+    void setUp() {
+        userSettings = new UserSettings(5, true);
+    }
+
+    @Test
+    void testGetWorkThreshold() {
+        assertEquals(5, userSettings.getWorkThreshold());
+    }
+
+    @Test
+    void testIsNotificationEnabled() {
+        assertTrue(userSettings.isNotificationEnabled());
+    }
+}
