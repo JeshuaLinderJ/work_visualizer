@@ -1,7 +1,7 @@
 # Work Tracker Application
 
 ## Overview
-The Work Tracker application is designed to help users log and visualize their work over set periods of time. It promotes productivity through task management and visualization techniques, including the Pomodoro technique. The application features a muted earth tone palette to create a calming user experience.
+The Work Tracker application is designed to help users log and visualize their work over set periods of time. It's goal is to promote productivity through task management and visualization techniques, including the Pomodoro technique, while keeping team/peer progress shareable and visualized to create opportunites for both feedback and visual understanding of the work achieved.
 
 ## Features
 - **Task Management**: Add, update, and delete tasks easily.
