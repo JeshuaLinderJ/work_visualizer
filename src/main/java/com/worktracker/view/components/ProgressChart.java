@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 
 public class ProgressChart extends JPanel {
     private List<Integer> workData;
-    private String title;
+    private final String title;
 
     public ProgressChart(List<Integer> workData, String title) {
         this.workData = workData;

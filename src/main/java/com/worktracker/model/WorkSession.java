@@ -38,11 +38,20 @@ public class WorkSession {
     }
 
     public long getTotalTimeSpent() {
-        return getDuration() / (60 * 1000); // Convert milliseconds to minutes
+        // Fix: ensure we never return negative values
+        long calculatedTime = getDuration() / (60 * 1000); // Convert milliseconds to minutes
+        
+        // Return zero if negative or absurdly large
+        return (calculatedTime < 0 || calculatedTime > Integer.MAX_VALUE) ? 0 : calculatedTime;
     }
 
     public long getTotalTime() {
-        return getDuration() / (60 * 1000);
+        // If endTime is 0 (session not ended), use current time
+        long currentEndTime = endTime > 0 ? endTime : System.currentTimeMillis();
+        long calculatedTime = (currentEndTime - startTime) / (60 * 1000);
+        
+        // Return zero if negative or absurdly large
+        return (calculatedTime < 0 || calculatedTime > Integer.MAX_VALUE) ? 0 : calculatedTime;
     }
 
     public String getDate() {

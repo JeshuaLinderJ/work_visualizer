@@ -1,8 +1,8 @@
 package com.worktracker;
 
-import com.worktracker.view.MainView;
+import javax.swing.SwingUtilities;
 
-import javax.swing.*;
+import com.worktracker.view.MainView;
 
 public class App {
     public static void main(String[] args) {

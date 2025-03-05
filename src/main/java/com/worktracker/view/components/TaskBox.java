@@ -1,11 +1,18 @@
 package com.worktracker.view.components;
 
-import javax.swing.*;
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
 
 public class TaskBox extends JPanel {
-    private String title;
-    private String description;
+    private final String title;
+    private final String description;
     private boolean isCompleted;
 
     public TaskBox(String title, String description) {

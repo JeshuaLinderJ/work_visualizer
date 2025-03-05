@@ -1,17 +1,29 @@
 package com.worktracker.view;
 
-import com.worktracker.controller.TaskController;
-import com.worktracker.model.Task;
-import com.worktracker.util.ColorTheme;
-
-import javax.swing.*;
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.font.TextAttribute;
 import java.util.List;
 import java.util.Map;
 
+import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+
+import com.worktracker.controller.TaskController;
+import com.worktracker.model.Task;
+
 public class TaskBoardView extends JPanel {
-    private TaskController taskController;
+    private final TaskController taskController;
     private JPanel tasksPanel; // Add this field to store the tasks panel
     
     public TaskBoardView(TaskController taskController) {
